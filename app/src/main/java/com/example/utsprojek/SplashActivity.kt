@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
         val nrp = findViewById<TextView>(R.id.nrp_murid)
         val kelas = findViewById<TextView>(R.id.kelas_murid)
 
-        judul.text = "UTS Project "
+        judul.text = "All In One "
         gambar.setImageResource(R.raw.back_splash)
         nama.text = "Arsyad Effendi"
         nrp.text = "152023107"
