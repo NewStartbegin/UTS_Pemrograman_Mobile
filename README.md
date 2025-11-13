@@ -84,16 +84,42 @@ Fitur ini menampilkan informasi cuaca dengan data dummy (simulasi).
 
 --- 
 
-## Preview Tampilan  
-![Splash Screen](Screenshoot/Splash_Screen.jpg)
-![Biodata](Screenshoot/Biodata_1.jpg)
-![Biodata](Screenshoot/Biodata_2.jpg)
-![Calculator](Screenshoot/Calculator_1.jpg)
-![Calculator](Screenshoot/Calculator_2.jpg)
-![Berita](Screenshoot/News_1.jpg)
-![Berita](Screenshoot/News_2.jpg)
-![Cuaca](Screenshoot/Cuaca_1.jpg)
-![Cuaca](Screenshoot/Cuaca_2.jpg)
-![Contact](Screenshoot/Contact_1.jpg)
-![Contact](Screenshoot/Contact_2.jpg)
+## Preview Tampilan 
+
+<h3 align="center">Splash Screen</h3>
+<p align="center">
+  <img src="Screenshoot/Splash_Screen.jpg" width="250">
+</p>
+
+<h3 align="center">Biodata</h3>
+<p align="center">
+  <img src="Screenshoot/Biodata_1.jpg" width="250">
+  <img src="Screenshoot/Biodata_2.jpg" width="250">
+</p>
+
+<h3 align="center">Calculator</h3>
+<p align="center">
+  <img src="Screenshoot/Calculator_1.jpg" width="250">
+  <img src="Screenshoot/Calculator_2.jpg" width="250">
+</p>
+
+<h3 align="center">Berita</h3>
+<p align="center">
+  <img src="Screenshoot/News_1.jpg" width="250">
+  <img src="Screenshoot/News_2.jpg" width="250">
+</p>
+
+<h3 align="center">Cuaca</h3>
+<p align="center">
+  <img src="Screenshoot/Cuaca_1.jpg" width="250">
+  <img src="Screenshoot/Cuaca_2.jpg" width="250">
+</p>
+
+<h3 align="center">Contact</h3>
+<p align="center">
+  <img src="Screenshoot/Contact_1.jpg" width="250">
+  <img src="Screenshoot/Contact_2.jpg" width="250">
+</p>
+
+
 
