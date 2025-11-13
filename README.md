@@ -121,5 +121,7 @@ Fitur ini menampilkan informasi cuaca dengan data dummy (simulasi).
   <img src="Screenshoot/Contact_2.jpg" width="250">
 </p>
 
+---
 
+Made By Arsyad Effendi
 
