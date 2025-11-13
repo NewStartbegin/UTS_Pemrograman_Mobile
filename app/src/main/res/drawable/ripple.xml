@@ -1,0 +1,39 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- State untuk tombol Equal (=) -->
+    <item android:state_selected="true">
+        <ripple android:color="#4F575E">
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#697881"/>
+                    <corners android:radius="12dp"/>
+                </shape>
+            </item>
+        </ripple>
+    </item>
+
+    <!-- State untuk tombol Operator (+, -, *, ÷) -->
+    <item android:state_focused="true">
+        <ripple android:color="#4F575E">
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#2C414A"/>
+                    <corners android:radius="12dp"/>
+                </shape>
+            </item>
+        </ripple>
+    </item>
+
+    <!-- State default untuk angka & fungsi -->
+    <item>
+        <ripple android:color="#4F575E">
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="#182730"/>
+                    <corners android:radius="12dp"/>
+                </shape>
+            </item>
+        </ripple>
+    </item>
+
+</selector>

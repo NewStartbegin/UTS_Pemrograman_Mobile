@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme menggunakan AppCompat -->
+    <style name="Base.Theme.UtsProjek" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/md_theme_primary</item>
+        <item name="colorPrimaryDark">@color/md_theme_primaryContainer</item>
+        <item name="colorAccent">@color/md_theme_secondary</item>
+    </style>
+
+    <style name="Theme.UtsProjek" parent="Base.Theme.UtsProjek" />
+</resources>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Background Circle -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#5864A8FF"/>
+            <size
+                android:width="36dp"
+                android:height="36dp"/>
+        </shape>
+    </item>
+
+    <!-- Arrow Icon -->
+    <item
+        android:width="16dp"
+        android:height="16dp"
+        android:gravity="center">
+        <vector
+            android:width="16dp"
+            android:height="16dp"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="#FFFFFF"
+                android:pathData="M8.59,16.59L13.17,12 8.59,7.41 10,6l6,6 -6,6z"/>
+        </vector>
+    </item>
+
+</layer-list>

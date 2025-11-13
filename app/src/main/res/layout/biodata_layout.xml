@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@raw/splash_back">
+
+    <!-- Navbar -->
+    <RelativeLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:padding="17dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/Judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/libre"
+            android:text="Biodata"
+            android:textColor="#4A6482"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- form biodata -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/navbar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#CC4A6482"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="24dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        app:cardCornerRadius="60dp"
+                        app:cardElevation="4dp">
+
+                        <ImageView
+                            android:id="@+id/profile_image"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@raw/back_splash"
+                            android:scaleType="centerCrop"
+                            android:contentDescription="Profile Photo">
+
+                        </ImageView>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:text="Foto Profile"
+                        android:textColor="#E0DAD4"
+                        android:textSize="18sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Lengkapi data diri Anda"
+                        android:textColor="#B8BCCD"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Form Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardBackgroundColor="#CC4A6482"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Nama -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Lengkap"
+                        android:textColor="#F2E7DC"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="Masukkan nama lengkap"
+                        android:textColorHint="#7A90A6"
+                        android:textColor="#F2E7DC"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:fontFamily="@font/libre"
+                        android:inputType="textPersonName" />
+
+                    <!-- NRP -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NRP"
+                        android:textColor="#F2E7DC"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_nrp"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="Masukkan NRP"
+                        android:textColorHint="#7A90A6"
+                        android:textColor="#F2E7DC"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:fontFamily="@font/libre"
+                        android:inputType="text"
+                        android:maxLength="15" />
+
+                    <!-- Email -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="#F2E7DC"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="arsyad@gmail.com"
+                        android:textColorHint="#7A90A6"
+                        android:textColor="#F2E7DC"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:fontFamily="@font/libre"
+                        android:inputType="textEmailAddress" />
+
+                    <!-- Nomor Telepon -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nomor Telepon"
+                        android:textColor="#F2E7DC"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_telepon"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="08xx-xxxx-xxxx"
+                        android:textColorHint="#7A90A6"
+                        android:textColor="#F2E7DC"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:fontFamily="@font/libre"
+                        android:inputType="number"
+                        android:digits="0123456789+" />
+
+                    <!-- Alamat -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Alamat"
+                        android:textColor="#F2E7DC"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/et_alamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/edittext_background"
+                        android:hint="Masukkan alamat lengkap"
+                        android:textColorHint="#7A90A6"
+                        android:textColor="#F2E7DC"
+                        android:padding="16dp"
+                        android:fontFamily="@font/libre"
+                        android:gravity="top"
+                        android:inputType="textMultiLine"
+                        android:maxLines="4" />
+
+                    <!-- Tanggal Lahir -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Lahir"
+                        android:textColor="#F2E7DC"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_tanggal_lahir"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/edittext_background"
+                        android:text="Pilih Tanggal Lahir"
+                        android:textColor="#7A90A6"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:gravity="center_vertical"
+                        android:fontFamily="@font/libre" />
+
+                    <!-- Jenis Kelamin -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jenis Kelamin"
+                        android:textColor="#F2E7DC"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/radio_group_gender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rb_laki"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Laki-laki"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <RadioButton
+                            android:id="@+id/rb_perempuan"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Perempuan"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                    </RadioGroup>
+
+                    <!-- Jurusan -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Jurusan"
+                        android:textColor="#F2E7DC"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spinner_jurusan"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/edittext_background"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:spinnerMode="dropdown" />
+
+                    <!-- Hobi -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hobi"
+                        android:textColor="#F2E7DC"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="16dp"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/cb_membaca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Membaca"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_olahraga"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Olahraga"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_musik"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Musik"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_traveling"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Traveling"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_memasak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Memasak"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_gaming"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Gaming"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_fotografi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Fotografi"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_menulis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Menulis"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_melukis"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Melukis"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_berkebun"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Berkebun"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_memancing"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Memancing"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                        <CheckBox
+                            android:id="@+id/cb_menonton_film"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Menonton Film"
+                            android:textColor="#F2E7DC"
+                            android:fontFamily="@font/libre"
+                            android:buttonTint="#F2E7DC" />
+
+                    </LinearLayout>
+
+                    <!-- Tombol Simpan -->
+                    <Button
+                        android:id="@+id/btn_simpan"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Simpan Data"
+                        android:textColor="#2F3E4F"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/libre"
+                        android:textStyle="bold"
+                        android:background="@drawable/button_background"
+                        android:elevation="4dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="#CC7A90A6"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center">
+
+            <!-- Contact -->
+            <LinearLayout
+                android:id="@+id/nav_contact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/page_contact"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Contact"
+                    android:clickable="false"
+                    app:tint="#9BA3B8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Contact"
+                    android:fontFamily="@font/libre"
+                    android:textColor="#AEB5C7"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- News -->
+            <LinearLayout
+                android:id="@+id/nav_news"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/berita"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="News"
+                    android:clickable="false"
+                    app:tint="#9BA3B8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="News"
+                    android:fontFamily="@font/libre"
+                    android:textColor="#AEB5C7"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- Biodata -->
+            <LinearLayout
+                android:id="@+id/nav_biodata"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Biodata"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/person"
+                    android:clickable="false"
+                    app:tint="#E4DBFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/libre"
+                    android:text="Biodata"
+                    android:textColor="#F2F4F7"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- Cuaca -->
+            <LinearLayout
+                android:id="@+id/nav_cuaca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/awan"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Cuaca"
+                    android:clickable="false"
+                    app:tint="#9BA3B8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Cuaca"
+                    android:fontFamily="@font/libre"
+                    android:textColor="#AEB5C7"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- Calculator -->
+            <LinearLayout
+                android:id="@+id/nav_calculator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <ImageButton
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:contentDescription="Calculator"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kalkulator"
+                    app:tint="#9BA3B8" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/libre"
+                    android:text="Kalkulator"
+                    android:textColor="#AEB5C7"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

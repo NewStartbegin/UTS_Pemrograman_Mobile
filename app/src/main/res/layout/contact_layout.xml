@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@raw/kontak_back">
+
+    <!-- Navbar -->
+    <RelativeLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="15dp"
+        android:padding="17dp">
+
+        <TextView
+            android:id="@+id/Judul"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/libre"
+            android:text="Daftar Kontak"
+            android:textColor="#423F5A"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <!-- Search Bar -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/search_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navbar"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        app:cardBackgroundColor="#CC423F5A"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:contentDescription="Search Icon"
+                app:tint="#E9E6F2" />
+
+            <EditText
+                android:id="@+id/search_contact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:background="@android:color/transparent"
+                android:hint="Cari kontak..."
+                android:textColorHint="#E9E6F2"
+                android:textColor="#E9E6F2"
+                android:textSize="16sp"
+                android:fontFamily="@font/libre"
+                android:inputType="text"
+                android:maxLines="1" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- ScrollView untuk daftar kontak -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_card"
+        android:layout_above="@id/bottom_navigation"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/contact_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Kontak akan ditambahkan secara dinamis di sini -->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="#CC4E4268"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:gravity="center">
+
+            <!-- Contact -->
+            <LinearLayout
+                android:id="@+id/nav_contact"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageButton
+                    android:id="@+id/contact"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/page_contact"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Contact"
+                    android:clickable="false"
+                    app:tint="#CCD7C48F" />
+
+                <TextView
+                    android:id="@+id/contact_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Contact"
+                    android:fontFamily="@font/libre"
+                    android:textColor="#CCE7DBC3"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- News -->
+            <LinearLayout
+                android:id="@+id/nav_news"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageButton
+                    android:id="@+id/news"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/berita"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="News"
+                    android:clickable="false"
+                    app:tint="#D2CDBE" />
+
+                <TextView
+                    android:id="@+id/news_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="News"
+                    android:fontFamily="@font/libre"
+                    android:textColor="#BEB9AF"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- Biodata -->
+            <LinearLayout
+                android:id="@+id/nav_biodata"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageButton
+                    android:id="@+id/biodata"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="Biodata"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/person"
+                    android:clickable="false"
+                    app:tint="#D2CDBE" />
+
+                <TextView
+                    android:id="@+id/biodata_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/libre"
+                    android:text="Biodata"
+                    android:textColor="#BEB9AF"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- Cuaca -->
+            <LinearLayout
+                android:id="@+id/nav_cuaca"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="4dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackgroundBorderless">
+
+                <ImageButton
+                    android:id="@+id/cuaca"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/awan"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Cuaca"
+                    android:clickable="false"
+                    app:tint="#D2CDBE" />
+
+                <TextView
+                    android:id="@+id/Cuaca_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Cuaca"
+                    android:fontFamily="@font/libre"
+                    android:textColor="#BEB9AF"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <!-- Calculator -->
+            <LinearLayout
+                android:id="@+id/nav_calculator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="4dp">
+
+                <ImageButton
+                    android:id="@+id/calculator"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@android:color/transparent"
+                    android:clickable="false"
+                    android:contentDescription="Calculator"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kalkulator"
+                    app:tint="#D2CDBE" />
+
+                <TextView
+                    android:id="@+id/calculator_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:fontFamily="@font/libre"
+                    android:text="Kalkulator"
+                    android:textColor="#BEB9AF"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
