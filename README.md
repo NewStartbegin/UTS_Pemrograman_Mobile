@@ -40,7 +40,7 @@ Fitur ini menampilkan daftar kontak lengkap dengan foto profil dan ikon untuk ak
 
 **Fungsionalitas:**  
 - **Menampilkan daftar kontak lengkap.**  
-- **Kontak diurutkan berdasarkan **huruf awal nama (A–Z).**  
+- **Kontak diurutkan berdasarkan** **huruf awal nama (A–Z).**  
 - **Search bar** untuk mencari kontak dengan cepat.  
 - **Circle Image** untuk setiap kontak (foto profil).  
 - **Icon Call** dan **Icon Message** (hanya tampilan visual, belum berfungsi).  
